@@ -9,7 +9,7 @@ try:
     while True:
         print("Enter Your choice or write \"done\" to exit")
         user_choice = input(">> ")
-        user_choice = user_choice.rstrip()
+        user_choice = user_choice.strip()
         count = count + 1
         wrt.write(str(count) + "\n")
         wrt.write("User Choice: " + user_choice + "\n")
@@ -54,8 +54,8 @@ try:
             print("Exited from the game")
             break
         # I could have used "else" but I tried to experiment with "elif" and "not in" condition
-        elif user_choice.lower() not in options:
-            print("Wrong INPUT. Try again")
+        # elif user_choice.lower() not in options:      # commenting because if this condition exist then there is no \n
+            # print("Wrong INPUT. Try again")           # need of except condition
         print("--------------------------------------------------------")
     wrt.close()
 except:
